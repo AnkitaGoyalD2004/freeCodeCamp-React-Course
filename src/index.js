@@ -1,26 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// function Greeting() {
-//   return (
-//     <div>
-//       <h2> My First Component</h2>;
-//     </div>
-//   );
-// }
-
-function Greeting() {
-  return React.createElement(
-    "div",
-    {},
-    React.createElement("h2", {}, "Hello World")
+const BookList = () => {
+  return <section></section>;
+};
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
   );
-}
+};
 
-// function Greeting() {
-//   return React.createElement("h2", {}, " Hello World");
-// }
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Greeting />);
-
-// every time we tink of component we think for function
+const Image = () => <h2>Image Placeholder</h2>;
+const Title = () => <h2>Book Title</h2>;
+const Author = () => {
+  return <h4>Author</h4>;
+};
