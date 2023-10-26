@@ -1,45 +1,41 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+
+
+const author = "Francesc Miralles";
+const title = "Intersting facts about Ikigai";
+const img ="./images/ikigai.jpg" ; 
+
+
+
+
 const BookList = () => {
   return (
     <section className="BookList">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book job = 'developer' />
+      <Book title= 'random title' number = {222}/>
+    
     </section>
   );
 };
-const Book = () => {
+
+const Book = (props) => {
+    console.log(props);
   return (
     <article className="Book">
-      <Image />
-      <Title />
-      <Author />
+      <img src={img}
+      alt={title} />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   );
 };
 
-const Image = () => (
-  <img
-    // This image is hosted on another server
-    src="./images/ikigai.jpg"
-    alt="Ikigai "
-  />
-);
-const Title = () => <h2>Book Title</h2>;
-const Author = () => {
-  const inlineHeadingStyles = {
-    color: "#617d98",
-    fontSize: "0.75 rem",
-    marginTop: "0.5rem",
-  };
-  return <h4 style={inlineHeadingStyles}>Francesc Miralles</h4>;
-};
-
+// {} --> this in jsx is value inside in this must be an expression (return some value)
+// it cannot be a statement
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList />);
+
+// {} --> this in jsx means going back to the js Land
+// value inside must be an expression

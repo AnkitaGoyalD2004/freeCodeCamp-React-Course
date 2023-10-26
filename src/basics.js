@@ -1,5 +1,6 @@
 // JSX Rules --> return a single element
 // Fragment --> let's group elements without adding extra node
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -45,7 +46,8 @@ const Message = () => <p> this is my message </p>;
 //     </React.Fragment>
 //   );
 // }
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Greeting />);
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Greeting />);
 
 // every time we tink of component we think for function
