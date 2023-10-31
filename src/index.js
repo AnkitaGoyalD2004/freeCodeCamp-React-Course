@@ -32,9 +32,8 @@ const thirdBook = {
 const BookList = () => {
   return (
     <section className="BookList">
-      {books.map((books) => {
-        const { img, title, author, id } = book;
-        return <Book img={img} title={title} author={author} key={id} />;
+      {books.map((book) => {
+        return <Book {...book} key={book.id} />;
       })}
     </section>
   );
@@ -42,11 +41,11 @@ const BookList = () => {
 //  children Prop
 //everything we want to render in between the component tag  we are using the special prop which is children
 
-const Book = ({ img, title, author }) => {
-  // console.log(props);
-  // const { img, title, author } = props;
+const Book = (props) => {
+  console.log(props);
+  const { img, title, author } = props;
   return (
-    <article className="Book">
+    <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
