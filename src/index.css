@@ -13,16 +13,17 @@ body {
 
 .BookList {
   width: 90vw;
-  max-width: 1170px;
-  margin: 5rem auto;
+  max-width: 170px;
+  margin: auto;
+  justify-content: center;
   display: grid;
   gap: 2rem;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .BookList {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+} */
 
 .Book {
   background-color: #fff;
@@ -41,9 +42,9 @@ body {
   font-size: 1rem;
 }
 
-.Book h4{
-    color: #617d98;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    letter-spacing: 2px;
+.Book h4 {
+  color: #617d98;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
 }
