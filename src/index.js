@@ -30,15 +30,15 @@ const thirdBook = {
 // console.log(newNames);
 
 const BookList = () => {
-  const someValue = "ShakeAndBake";
-  const displayValue = () => {
-    console.log(someValue);
+  const getBook = (id) => {
+    const book = books.find((book) => book.id === id);
+    console.log(book);
   };
   return (
     <section className="BookList">
       {/* <EventExamples /> */}
       {books.map((book) => {
-        return <Book {...book} key={book.id} displayValue={displayValue} />;
+        return <Book {...book} key={book.id} getBook={getBook} />;
       })}
     </section>
   );
@@ -84,14 +84,14 @@ const BookList = () => {
 //everything we want to render in between the component tag  we are using the special prop which is children
 
 const Book = (props) => {
-  const { img, title, author, displayValue } = props;
+  const { img, title, author, getBook } = props;
   // console.log(props);
 
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={displayValue}>click me</button>
+      <button onClick={getBook}>click me</button>
       <h4>{author}</h4>
     </article>
   );
