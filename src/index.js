@@ -10,21 +10,24 @@ import Book from "./Book";
 // });
 // console.log(newNames);
 
-function BookList() {
-  const getBook = (id) => {
-    const book = books.find((book) => book.id === id);
-    console.log(book);
-  };
+const BookList = () => {
+  // const getBook = (id) => {
+  //   const book = books.find((book) => book.id === id);
+  //   console.log(book);
+  // };
   // getBook(2);
   return (
-    <section className="BookList">
-      {/* <EventExamples /> */}
-      {books.map((book) => {
-        return <Book {...book} key={book.id} getBook={getBook} />;
-      })}
-    </section>
+    <>
+      <h1> Sellers </h1>
+      <section className="BookList">
+        {/* <EventExamples /> */}
+        {books.map((book, index) => {
+          return <Book {...book} key={book.id} number={index} />;
+        })}
+      </section>
+    </>
   );
-}
+};
 
 // const EventExamples = () => {
 //   //   const handleFormInput = (e) => {
