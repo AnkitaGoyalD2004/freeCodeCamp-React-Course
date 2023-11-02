@@ -1,27 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-
-const books = [
-  {
-    author: "Francesc Miralles",
-    title: "Intersting facts about Ikigai",
-    img: "./images/ikigai.jpg",
-    id: 1,
-  },
-  {
-    author: "James Clear",
-    title: "Atomic Habits",
-    img: "https://images-eu.ssl-images-amazon.com/images/I/91bYsX41DVL._AC_UL900_SR900,600_.jpg",
-    id: 2,
-  },
-];
-
-const thirdBook = {
-  author: "Morgan Housel",
-  title: "The Psychology Of Money",
-  img: "https://images-eu.ssl-images-amazon.com/images/I/71g2ednj0JL._AC_UL900_SR900,600_.jpg",
-};
+import { books } from "./books";
+import Book from "./Book";
 
 // const names = ["john", "Dishu", "Tashu"];
 // const newNames = names.map((name)=>{
@@ -29,11 +10,12 @@ const thirdBook = {
 // });
 // console.log(newNames);
 
-const BookList = () => {
+function BookList() {
   const getBook = (id) => {
     const book = books.find((book) => book.id === id);
     console.log(book);
   };
+  // getBook(2);
   return (
     <section className="BookList">
       {/* <EventExamples /> */}
@@ -42,7 +24,7 @@ const BookList = () => {
       })}
     </section>
   );
-};
+}
 
 // const EventExamples = () => {
 //   //   const handleFormInput = (e) => {
@@ -82,20 +64,6 @@ const BookList = () => {
 
 //  children Prop
 //everything we want to render in between the component tag  we are using the special prop which is children
-
-const Book = (props) => {
-  const { img, title, author, getBook } = props;
-  // console.log(props);
-
-  return (
-    <article className="book">
-      <img src={img} alt={title} />
-      <h2>{title}</h2>
-      <button onClick={getBook}>click me</button>
-      <h4>{author}</h4>
-    </article>
-  );
-};
 
 // {} --> this in jsx is value inside in this must be an expression (return some value)
 // it cannot be a statement
