@@ -18,7 +18,7 @@ const BookList = () => {
   // getBook(2);
   return (
     <>
-      <h1> Sellers </h1>
+      <h1>Amazon Best Sellers </h1>
       <section className="BookList">
         {/* <EventExamples /> */}
         {books.map((book, index) => {

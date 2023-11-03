@@ -9,7 +9,7 @@ const Book = (props) => {
       <img src={img} alt={title} />
       <h2>{title}</h2>
       {/* <button onClick={() => getBook(id)}>click me</button> */}
-      <h4>{author}</h4>
+      <h4>{author.toUpperCase()}</h4>
       <span className="number">{`# ${number + 1}`}</span>
     </article>
   );
