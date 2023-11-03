@@ -68,8 +68,9 @@ body {
 }
 
 h1 {
-  text-align: centre;
+  text-align: center;
   margin-top: 4rem;
   text-transform: capitalize;
   justify-content: center;
+  /* align-self: center; */
 }
